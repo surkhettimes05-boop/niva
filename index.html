@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101f3b">
+  <meta name="description" content="NIVA. Everyday care, elevated. A new personal care brand is coming soon.">
+  <title>NIVA — Everyday care, elevated.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#101f3b;--paper:#f5f0e8;--orange:#ff6538;--blue:#92d4e8;--white:#fffdf8;--line:rgba(16,31,59,.18)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1280px,calc(100% - 48px));margin:auto}
+    .topbar{height:84px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .logo{font-family:"Space Grotesk",sans-serif;font-size:30px;font-weight:700;letter-spacing:-2.8px;display:flex;align-items:center;gap:2px}.logo-v{position:relative}.logo-v:after{content:"";position:absolute;width:7px;height:7px;background:var(--orange);right:-3px;top:2px;border-radius:50%}
+    .topnote{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}.topright{display:flex;align-items:center;gap:24px;font-size:13px}.topright .dot{width:8px;height:8px;background:var(--orange);border-radius:50%;display:inline-block;margin-right:8px}
+    .hero{min-height:690px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:36px;padding:64px 0 74px}
+    .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";height:2px;width:30px;background:var(--orange)}
+    h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(68px,8.6vw,124px);letter-spacing:-.09em;line-height:.87;margin:30px 0 26px;font-weight:600;max-width:720px}
+    h1 .accent{color:var(--orange)}.intro{font-size:18px;line-height:1.6;max-width:420px;color:#394762}.intro strong{color:var(--ink)}
+    .cta-row{display:flex;gap:12px;align-items:center;margin-top:34px}.cta{display:inline-flex;align-items:center;justify-content:center;padding:16px 22px;background:var(--ink);color:var(--white);font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;min-height:52px}.cta:hover{background:var(--orange);color:var(--ink)}.smallnote{font-size:12px;color:#59657a}
+    .stage{position:relative;min-height:540px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--blue);border-radius:2px}
+    .stage:before{content:"";position:absolute;width:450px;height:450px;border:1px solid rgba(16,31,59,.22);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}.stage:after{content:"";position:absolute;width:330px;height:330px;border:1px solid rgba(16,31,59,.22);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}
+    .orb{position:absolute;width:88px;height:88px;border-radius:50%;background:var(--orange);right:10%;top:10%;z-index:1}.orb:after{content:"";position:absolute;inset:15px;border:1px solid var(--ink);border-radius:50%}
+    .pack{z-index:2;width:min(330px,68%);aspect-ratio:1.55/1;background:var(--ink);color:var(--paper);position:relative;box-shadow:22px 28px 0 rgba(16,31,59,.15);transform:rotate(-9deg);display:flex;flex-direction:column;padding:24px 27px;overflow:hidden}
+    .pack:before{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:var(--orange);right:-110px;top:-115px}.pack:after{content:"";position:absolute;width:100%;height:40%;background:var(--orange);bottom:-5px;right:-40%;transform:rotate(-45deg)}
+    .pack-top{font-size:10px;letter-spacing:.17em;display:flex;justify-content:space-between;z-index:1}.pack-logo{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:56px;letter-spacing:-6px;line-height:1;margin-top:20px;z-index:1}.pack-logo span{color:var(--orange)}.pack-name{font-weight:700;font-size:12px;letter-spacing:.12em;text-transform:uppercase;z-index:1;margin-top:5px}.pack-bottom{display:flex;justify-content:space-between;align-items:end;margin-top:auto;z-index:1;font-size:10px;letter-spacing:.1em}.pack-bottom b{font-size:17px}
+    .stamp{position:absolute;bottom:35px;left:35px;font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:700;z-index:2}.stage-label{position:absolute;top:28px;left:30px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;z-index:2}
+    .ticker{background:var(--ink);color:var(--paper);overflow:hidden;white-space:nowrap;padding:17px 0;font-family:"Space Grotesk",sans-serif;font-size:15px;letter-spacing:.13em;text-transform:uppercase}.ticker span{color:var(--orange);padding:0 26px}
+    .manifesto{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;padding:110px 0}.manifesto h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(35px,5vw,65px);line-height:1;letter-spacing:-.065em;margin:0}.manifesto-copy{max-width:600px;font-size:20px;line-height:1.7}.manifesto-copy p{margin:0 0 24px}.manifesto-copy .muted{font-size:14px;line-height:1.7;color:#59657a}
+    .coming{background:var(--orange);padding:70px 0 75px}.coming-inner{display:flex;align-items:flex-end;justify-content:space-between;gap:40px}.coming h2{font-family:"Space Grotesk",sans-serif;font-size:clamp(42px,7vw,92px);letter-spacing:-.075em;line-height:.9;margin:18px 0 0}.coming p{max-width:340px;font-size:15px;line-height:1.6;margin:0}
+    footer{background:var(--ink);color:var(--paper);padding:28px 0}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-logo{font-family:"Space Grotesk",sans-serif;font-size:26px;font-weight:700;letter-spacing:-2px}.footer-small{font-size:11px;color:#b8c2d3;letter-spacing:.08em;text-transform:uppercase}
+    @media(max-width:850px){.hero{grid-template-columns:1fr;padding:50px 0;gap:36px}.stage{min-height:420px}.manifesto{grid-template-columns:1fr;gap:30px;padding:75px 0}.coming-inner{display:block}.coming p{margin-top:28px}.topnote{display:none}}
+    @media(max-width:520px){.wrap{width:calc(100% - 32px)}.topbar{height:70px}.topright{font-size:11px}.hero{padding:42px 0 50px}h1{font-size:76px}.intro{font-size:16px}.stage{min-height:340px}.pack{width:72%;padding:18px 20px}.pack-logo{font-size:46px}.orb{width:64px;height:64px}.stage:before{width:330px;height:330px}.stage:after{width:250px;height:250px}.stamp{left:20px;bottom:20px}.stage-label{left:20px;top:20px}.footer-inner{align-items:flex-start;flex-direction:column}.cta-row{flex-wrap:wrap}}
+  </style>
+</head>
+<body>
+  <header class="wrap topbar">
+    <a class="logo" href="#" aria-label="NIVA home">NI<span class="logo-v">V</span>A</a>
+    <div class="topnote">Everyday care. Elevated.</div>
+    <div class="topright"><span><i class="dot"></i>Coming soon</span><span>NEPAL · 01</span></div>
+  </header>
+  <main>
+    <section class="wrap hero">
+      <div>
+        <div class="eyebrow">A new kind of everyday</div>
+        <h1>GOOD<br>CARE.<br><span class="accent">NO</span><br>EXTRA.</h1>
+        <p class="intro">The everyday things deserve a little more thought. <strong>NIVA is on its way.</strong> Personal care, reimagined for the everyday.</p>
+        <div class="cta-row"><a class="cta" href="#arrival">Something good is coming <span aria-hidden="true">&nbsp;↗</span></a><span class="smallnote">Launching soon in Nepal.</span></div>
+      </div>
+      <div class="stage" aria-label="NIVA soap packaging concept illustration">
+        <div class="stage-label">NIVA · PRODUCT 001</div><div class="orb"></div>
+        <div class="pack">
+          <div class="pack-top"><span>EVERYDAY CARE</span><span>001 / 100G</span></div>
+          <div class="pack-logo">NI<span>V</span>A</div>
+          <div class="pack-name">Fresh ritual<br>Daily bathing bar</div>
+          <div class="pack-bottom"><span>MADE FOR THE<br>EVERYDAY</span><b>100 g</b></div>
+        </div>
+        <div class="stamp">A better everyday starts here.</div>
+      </div>
+    </section>
+    <div class="ticker" aria-hidden="true">EVERYDAY CARE <span>✳</span> ELEVATED <span>✳</span> GOOD CARE, WITHIN REACH <span>✳</span> NIVA IS COMING <span>✳</span> EVERYDAY CARE <span>✳</span> ELEVATED <span>✳</span></div>
+    <section class="wrap manifesto">
+      <h2>Not a special<br>occasion.<br><span style="color:var(--orange)">Every day.</span></h2>
+      <div class="manifesto-copy"><p>We think everyday care should feel considered, work beautifully and be within reach.</p><p>So we're making personal care with a little more intention. No fuss. No inflated promises. Just good things you'll want to use every day.</p><p class="muted">We're getting the first one ready. This is just the beginning.</p></div>
+    </section>
+    <section id="arrival" class="coming">
+      <div class="wrap coming-inner"><div><div class="eyebrow">First, a fresh start</div><h2>WE'RE<br>ALMOST<br>HERE.</h2></div><p>NIVA is getting ready to make its first appearance. Stay close. We promise it's worth the wait.</p></div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-inner"><a class="footer-logo" href="#">NIVA</a><span class="footer-small">Everyday care. Elevated.</span><span class="footer-small">© NIVA · Nepal</span></div></footer>
+</body>
+</html>
